@@ -24,9 +24,9 @@ README=f'''<p align="center">
 
 一套可安装的中文文档设计技能。用暖纸、宋体、墨线与克制的陶土色组织内容，让同一种设计语言，在 HTML、PDF、DOCX、PPTX 中形成各自的阅读节奏。
 
-[![克劳德设计 · 设计风格与哲学，点击查看完整影片](docs/media/design-philosophy.gif)](docs/media/design-philosophy.mp4)
+[![克劳德设计 · 设计风格与哲学，点击查看完整影片](docs/media/design-philosophy-full.gif)](docs/media/design-philosophy.mp4)
 
-*40 秒风格哲学片 · 上方为开场与片尾节选 · [观看完整影片](docs/media/design-philosophy.mp4) · [HTML 阅读版](docs/readme.html)*
+*40 秒完整循环 GIF · 点击查看有声影片 · [观看完整影片](docs/media/design-philosophy.mp4) · [HTML 阅读版](docs/readme.html)*
 
 [快速安装](#快速安装) · [设计哲学](#设计哲学) · [四格式示例](#四格式示例) · [开始创作](#开始创作) · [本地运行](#本地运行)
 
@@ -183,7 +183,7 @@ reading=f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta 
 @media(prefers-reduced-motion:reduce){{html{{scroll-behavior:auto}}}}@media print{{nav,.copy{{display:none}}body{{font-size:11pt}}main{{max-width:none}}.code-wrap,figure,table{{break-inside:avoid}}}}
 </style></head><body><header><a class="wordmark" href="#top">克劳德设计</a><nav aria-label="章节导航"><a href="#philosophy">设计哲学</a><a href="#install">安装</a><a href="#examples">示例</a><a href="{REPO}">GitHub ↗</a></nav></header><main id="top">
 <div class="hero"><div class="eyebrow">ANTHROPIC DESIGN STYLE / EDITORIAL STUDIES</div><h1>给思想，<br>留出呼吸的空间。</h1><p class="lead">暖纸、宋体、墨线与克制的陶土色。<br>一种设计语言，四种阅读节奏。</p><p class="intro">克劳德设计是一套可安装的中文文档设计技能。从内容结构出发，用比例、疏密与清楚的层级，把材料变成可以阅读的表达。</p><a class="readme-link" href="#install">开始使用　↓</a></div>
-<figure class="film"><a href="media/design-philosophy.mp4"><img src="media/design-philosophy.gif" alt="克劳德设计：暖纸、墨线、留白，点击查看40秒影片" width="960" height="540"></a><figcaption><span>40 秒设计风格哲学片 / 开场与片尾节选</span><a href="media/design-philosophy.mp4">观看完整影片 ↗</a></figcaption></figure>
+<figure class="film"><a href="media/design-philosophy.mp4"><img src="media/design-philosophy-full.gif" alt="克劳德设计：暖纸、墨线、留白，点击查看40秒影片" width="960" height="540"></a><figcaption><span>40 秒设计风格哲学片 / 完整循环 GIF</span><a href="media/design-philosophy.mp4">观看完整影片 ↗</a></figcaption></figure>
 <section id="philosophy"><div class="eyebrow">01 / PHILOSOPHY</div><h2>先有内容，再有版式。</h2><div class="principles"><article><span class="number">01</span><h3>内容先行</h3><p>先理解用途与读者，再梳理结论、证据和行动；不为了留白删掉关键内容。</p></article><article><span class="number">02</span><h3>留白有度</h3><p>暖纸为阅读留出时间，宋体建立层级，细线连接信息。用疏密，组织目光的停顿。</p></article><article><span class="number">03</span><h3>强调克制</h3><p>陶土色只点亮关键词、编号和转折。正文与版心保持严格对齐。</p></article><article><span class="number">04</span><h3>图形有义</h3><p>插画回应当前主题，图表回答具体问题；真实数据与演示假设清楚区分。</p></article></div><blockquote>以阅读为尺度，<br>让设计退后，让思想向前。</blockquote><p class="aside">字、线与留白都要有理由。设计的精致，来自信息被认真组织。</p></section>
 <section id="formats"><div class="eyebrow">02 / FOUR READING RHYTHMS</div><h2>同一份思想，因阅读而重组。</h2><table><caption class="aside">四格式共用内容、字体、色彩与品牌</caption><tbody>{formatrows}</tbody></table></section>
 <section id="install"><div class="eyebrow">03 / START HERE</div><h2>把设计方法，交给你的智能体。</h2><h3>复制这一句话</h3><p>适用于 Codex、Claude Code 或其他能够读写本地文件的智能体。</p>{code(AGENT_PROMPT)}<h3>或在终端安装到 Codex</h3>{code(INSTALL)}<p class="aside">需要 Node.js 22.20+ 与 Git。安装后开启新会话；首次运行生成器时，另行安装本地依赖。<a href="INSTALL.md">完整安装指南 ↗</a></p><h3>给它一份真实材料</h3>{code(USE_PROMPT)}</section>

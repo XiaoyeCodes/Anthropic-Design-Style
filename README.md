@@ -8,9 +8,9 @@
 
 一套可安装的中文文档设计技能。用暖纸、宋体、墨线与克制的陶土色组织内容，让同一种设计语言，在 HTML、PDF、DOCX、PPTX 中形成各自的阅读节奏。
 
-[![克劳德设计 · 设计风格与哲学，点击查看完整影片](docs/media/design-philosophy.gif)](docs/media/design-philosophy.mp4)
+[![克劳德设计 · 设计风格与哲学，点击查看完整影片](docs/media/design-philosophy-full.gif)](docs/media/design-philosophy.mp4)
 
-*40 秒风格哲学片 · 上方为开场与片尾节选 · [观看完整影片](docs/media/design-philosophy.mp4) · [HTML 阅读版](docs/readme.html)*
+*40 秒完整循环 GIF · 点击查看有声影片 · [观看完整影片](docs/media/design-philosophy.mp4) · [HTML 阅读版](docs/readme.html)*
 
 [快速安装](#快速安装) · [设计哲学](#设计哲学) · [四格式示例](#四格式示例) · [开始创作](#开始创作) · [本地运行](#本地运行)
 

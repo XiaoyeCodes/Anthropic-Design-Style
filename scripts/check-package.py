@@ -5,7 +5,7 @@ import re
 import urllib.parse
 
 R=Path(__file__).resolve().parents[1]
-required=['SKILL.md','agents/openai.yaml','README.md','docs/readme.html','docs/INSTALL.md','requirements.txt','package.json','package-lock.json','assets/fonts/serif.ttf','assets/fonts/body.ttf','assets/fonts/manifest.json','docs/media/header.png','docs/media/design-philosophy.gif','docs/media/design-philosophy.mp4','examples/showcase/克劳德设计_示例.pdf','examples/showcase/克劳德设计_示例.docx','examples/showcase/克劳德设计_示例.pptx','examples/showcase/克劳德设计_示例.html','LICENSE','THIRD_PARTY.md']
+required=['SKILL.md','agents/openai.yaml','README.md','docs/readme.html','docs/INSTALL.md','requirements.txt','package.json','package-lock.json','assets/fonts/serif.ttf','assets/fonts/body.ttf','assets/fonts/manifest.json','docs/media/header.png','docs/media/design-philosophy-full.gif','docs/media/design-philosophy.mp4','examples/showcase/克劳德设计_示例.pdf','examples/showcase/克劳德设计_示例.docx','examples/showcase/克劳德设计_示例.pptx','examples/showcase/克劳德设计_示例.html','LICENSE','THIRD_PARTY.md']
 for f in required:
     assert (R/f).is_file(), 'Missing: '+f
 skill=(R/'SKILL.md').read_text('utf-8')
