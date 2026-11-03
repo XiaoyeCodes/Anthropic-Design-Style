@@ -1,0 +1,13 @@
+{
+  "name": "anthropic-design-style",
+  "version": "1.0.0",
+  "private": true,
+  "description": "克劳德设计：暖纸、墨线与编辑式中文排版",
+  "license": "MIT",
+  "engines": { "node": ">=22.20.0" },
+  "dependencies": { "docx": "9.15.1" },
+  "scripts": {
+    "example": "python scripts/run.py",
+    "doctor": "python scripts/doctor.py"
+  }
+}

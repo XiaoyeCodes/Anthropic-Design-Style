@@ -1,0 +1,4 @@
+interface:
+  display_name: "克劳德设计"
+  short_description: "以暖纸、墨线、宋体与留白组织中文内容，为四种载体设计阅读节奏"
+  default_prompt: "请用 $anthropic-design-style 根据我的材料制作结构清楚、表达有据的中文文档，按阅读场景设计 HTML、PDF、DOCX 和 PPTX，并检查实际渲染。"

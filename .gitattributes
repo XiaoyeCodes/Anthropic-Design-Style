@@ -1,0 +1,17 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.cjs text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.ttf binary
+*.woff2 binary
+*.png binary
+*.jpg binary
+*.gif binary
+*.mp4 binary
+*.pdf binary
+*.docx binary
+*.pptx binary
+assets/fonts/OFL-*.txt whitespace=-blank-at-eof,-blank-at-eol,-space-before-tab
+examples/showcase/assets/fonts/OFL-*.txt whitespace=-blank-at-eof,-blank-at-eol,-space-before-tab

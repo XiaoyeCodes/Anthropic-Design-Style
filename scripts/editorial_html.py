@@ -1,0 +1,14 @@
+from pathlib import Path
+import html
+from editorial_core import svg
+def export_html(d,mark,hero,v,out):
+ e=html.escape;parts=[];charts={0:['time'],1:['flow'],2:['architecture'],3:['gantt','coverage']}
+ for i,ch in enumerate(d['chapters']):
+  if 'table' in ch:body='<div class="table-scroll"><table>'+''.join('<tr>'+''.join(f'<{"th" if k==0 else "td"}>{e(c)}</{"th" if k==0 else "td"}>' for c in r)+'</tr>' for k,r in enumerate(ch['table']))+'</table></div>'
+  else:body='<div class="cards">'+''.join(f'<article><span class="num">{e(r[0]) if i==3 else f"0{j+1}"}</span><h3>{e(r[1] if i==3 else r[0])}</h3><p>{e(r[2] if i==3 else r[1])}</p></article>' for j,r in enumerate(ch['items']))+'</div>'
+  graphs=''.join('<figure>'+svg(v[k])+'<figcaption class="scroll-note">窄屏可左右滑动查看完整图表。</figcaption></figure>' for k in charts.get(i,[]));parts.append(f'<section id="s{i+1}"><div class="eyebrow">{e(ch["eyebrow"])}</div><h2>{e(ch["title"])}</h2><p class="lead">{e(ch["lead"])}</p>{body}<div class="graphs">{graphs}</div><blockquote>{e(ch["quote"])}</blockquote><p class="caption">{e(ch["caption"])}</p></section>')
+ css=Path(__file__).with_name('editorial.css').read_text(encoding='utf-8');css=css.replace('Microsoft YaHei','Editorial Sans SC').replace('SimSun','Editorial Serif SC').replace('Georgia','Editorial Serif SC');css='@font-face{font-family:"Editorial Serif SC";src:url("assets/fonts/serif.ttf")}@font-face{font-family:"Editorial Sans SC";src:url("assets/fonts/body.ttf")}'+css;identity=d['identity'];logo='<a class="brand" href="#top" aria-label="返回文档顶部">'+svg(mark)+f'<span>{e(identity["name"])}<small>{e(identity["descriptor"])}</small></span></a>'
+ icon='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H6V3h1m7 0v5h4M9 12h6m-6 4h6"/></svg>'
+ downloads=''.join(f'<a class="download" href="{e(d["_output_stem"])}.{ext}" download>{icon}<span>{lab}</span><span aria-hidden="true">↓</span></a>' for ext,lab in [('pdf','PDF'),('docx','Word'),('pptx','PowerPoint')])
+ text=f'<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(d["title"])} · {e(identity["name"])}</title><style>{css}</style><body id="top"><header>{logo}<nav><a href="#s1"><small>01</small>产品定位</a><a href="#s3"><small>02</small>首期范围</a><a href="#s5"><small>03</small>验收标准</a></nav></header><main><div class="hero"><div><div class="eyebrow">PRODUCT PROPOSAL / V2.0</div><h1>{e(d["title"])}</h1><p class="tagline">{e(d["subtitle"]).replace(chr(10),"<br>")}</p><p class="lead">{e(d["intro"])}</p><div class="downloads">{downloads}</div><p class="caption">{e(d["version"])}</p></div>{svg(hero)}</div><div class="note">{e(d["note"])}</div>{"".join(parts)}</main><footer>{logo}<span>结构清楚，表达有据。<br>独立设计示例 · V2.0</span></footer></body></html>'
+ (out/(d['_output_stem']+'.html')).write_text(text,encoding='utf-8')

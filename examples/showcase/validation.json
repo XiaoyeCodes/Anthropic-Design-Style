@@ -1,0 +1,32 @@
+{
+  "pdf": {
+    "pages": 6,
+    "searchable_text_chars": [
+      286,
+      392,
+      407,
+      386,
+      331,
+      364
+    ]
+  },
+  "docx": {
+    "native_paragraphs": 147,
+    "native_tables": 10
+  },
+  "pptx": {
+    "slides": 8,
+    "editable_text_runs": 218,
+    "raster_pictures": 0
+  },
+  "html": {
+    "local_targets": "verified",
+    "fonts": "bundled"
+  },
+  "scope": "Structure and searchable Chinese checked. Office pagination and appearance need actual Office/LibreOffice rendering, not inferred from this test.",
+  "actual_office": {
+    "docx_pages": 6,
+    "pptx_slides": 8,
+    "fonts": "Office renderer may substitute fonts unless bundled families are installed."
+  }
+}
